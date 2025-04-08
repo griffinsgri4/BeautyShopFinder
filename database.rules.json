@@ -1,0 +1,29 @@
+PS C:\Users\1\Documents\BeautyShopFinder> node scripts/initializeShops.js         
+Sample shop data initialized successfully{
+  "rules": {
+    ".read": true,
+    ".write": "auth != null && root.child('users').child(auth.uid).child('role').val() === 'admin'",
+    "shops": {
+      ".read": true,
+      ".write": "auth != null && root.child('users').child(auth.uid).child('role').val() === 'admin'"
+    },
+    "users": {
+      ".read": true,
+      "$uid": {
+        ".write": "auth != null && (auth.uid === $uid || root.child('users').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    "appointments": {
+      ".read": true,
+      "$appointmentId": {
+        ".write": "auth != null && (auth.uid === data.child('userId').val() || root.child('users').child(auth.uid).child('role').val() === 'admin')"
+      }
+    },
+    "reviews": {
+      ".read": true,
+      "$reviewId": {
+        ".write": "auth != null && (auth.uid === data.child('userId').val() || root.child('users').child(auth.uid).child('role').val() === 'admin')"
+      }
+    }
+  }
+}

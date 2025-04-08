@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="1000" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#3498db;stop-opacity:0.2"/>
+    </linearGradient>
+    <pattern id="pattern1" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 20 L40 20 M20 0 L20 40" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGradient)"/>
+  <rect width="100%" height="100%" fill="url(#pattern1)"/>
+  <g transform="translate(500,500)" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.1">
+    <circle r="200"/>
+    <circle r="300"/>
+    <circle r="400"/>
+  </g>
+  <path d="M0,0 L1000,0 L1000,1000 L0,1000 Z" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1"/>
+</svg>
